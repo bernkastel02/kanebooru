@@ -1,2 +1,2 @@
 # Kanebooru
-A work in progress Touhou Imageboard.
+A work in progress Imageboard.
