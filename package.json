@@ -18,5 +18,9 @@
   "bugs": {
     "url": "https://github.com/keinekamishirasawa/kanebooru/issues"
   },
-  "homepage": "https://github.com/keinekamishirasawa/kanebooru#readme"
+  "homepage": "https://github.com/keinekamishirasawa/kanebooru#readme",
+  "dependencies": {
+    "body-parser": "^1.16.0",
+    "express": "^4.14.1"
+  }
 }
