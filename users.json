@@ -1,8 +1,1 @@
-{
-    users: [
-        {
-            username: "Keine Kamishirasawa",
-            password: "password"
-        }    
-    ]
-}
+{}
