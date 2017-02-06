@@ -1,37 +1,64 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Keine Kamisharasawa's Work in Pwogress booru</title>
+        <title>Kanebooru</title>
+        <meta name="Description" content="Booru imageboard created using the Kanebooru imageboard software. Kanebooru software created with ❤  by Keine Kamishirasawa">
+        <meta name="author" content="Kanebooru">
         <!--Import Google Icon Font-->
-        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
         <!--Import materialize.css-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
     </head>
     <body> <!-- style="background: url('home-page/gradiant.jpg') repeat-x;" -->
+    <div class="content">
         <br>
         <br>
-        <center>
-            <h3 class="light-green-text text-darken-3">Kanebooru <div class="chip green">ALPHA</div></h3>
-        </center>
-        <div class="row">
-            <form class="col s12">
-                <div class="row center">
-                    <div class="input-field col s12">
-                        <input disabled value="I am not editable, because this site is Work in Progress!" id="disabled" type="text" class="center validate light-green-text">
-                        <label for="disabled" class="light-green-text text-lighten-2">Disabled</label>
+        <h3 class="light-green-text text-darken-3" style="position: absolute; left: 50px; top: 10px">Kanebooru <div class="chip green">ALPHA</div></h3>
+        <h6 class="light-green-text text-darken-2" style="position: absolute; left: 60px; top: 65px">Made by Keine Kamishirasawa</h6>
+        <br>
+        <br>
+        <br>
+        <div class="row center-align">
+            <form class="col s12 center-align">
+                <div class="row">
+                    <div class="input-field col s6 center">
+                        <i class="fa fa-search prefix"></i>
+                        <input disabled value="I am not editable, because this site is Work in Progress!" id="disabled" type="text" class="center validate light-green-text text-darken-1">
+                        <label for="disabled" class="light-green-text text-darken-2">Disabled</label>
                     </div>
                 </div>
             </form>
         </div>
+    </div>
         
+        <div class="footer">
+            <h6 class="grey-text text-lighten-1 center">Created with <i class="fa fa-heart red-text"></i> by <a href="https://github.com/keinekamishirasawa">Keine Kamishirasawa</a></h6>
+            <h6 class="grey-text text-lighten-1 center">This site is running Kanebooru <div class="chip green">ALPHA</div> 0.0.1</h5>
+        </div>
         
         <!--Import jQuery before materialize.js-->
         <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
-        <script type="text/javascript"">
-            
+        <script type="text/javascript">
+            $(document).ready(function(){
+                document.body.className = "homeBG";
+            });
         </script>
     </body>
-    <style type="text/css">
+    <style>
+        .homeBG {
+            background: url('http://www.wallpaperup.com/uploads/wallpapers/2013/03/29/66415/50c93fcf40dd706651cc9b38e77ffdcb.jpg') no-repeat center center fixed; 
+  			-webkit-background-size: cover;
+  			-moz-background-size: cover;
+  			-o-background-size: cover;
+  			background-size: cover;
+        }
+        .content {
+            min-height: calc(100vh - 70px);
+        }
+        .footer {
+            height: 50px;
+        }
+      
     </style>
 </html>

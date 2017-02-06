@@ -18,9 +18,32 @@ router.get('/api', function(req, res) {
     });   
 });
 
+router.post('/api/users', function(req, res) {
+        let reqq = {
+            username: req.body.username || null,
+            password: req.body.password || null
+        }
+        if (reqq.username == null) {
+            res.json({ code: 400, reason: "Could not find username querystring."})
+        } else if (reqq.password == null) {
+            res.json({ code: 400, reason: "Could not find password querystring."})
+        } else {
+            if (!fs.existsSync("./api/users.json")) {
+                fs.appendFile("./api/users.json")
+            } else {
+                let users = require("./api/users.json")
+                users.push(reqq)
+                res.json({ code: 200, user: reqq})
+                fs.appendFile("./api/users.json", users, "utf8", (error, resp) => {
+                    
+                })
+            }
+            
+        }
+});
+
 router.get("/", function(req, res) {
     res.sendFile(path.join(__dirname + '/index.html'));
-    res.sendFile(path.join(__dirname + '/css/materialize.min.css'))
 })
 
 app.use('/', router);

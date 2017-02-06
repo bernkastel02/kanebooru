@@ -1,0 +1,2 @@
+# Ignore this because it contains passwords. The booru site will create it on usercreation.
+./api/users.json
